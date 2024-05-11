@@ -11,16 +11,20 @@ public:
     enum AccessModifier {
         PUBLIC,
         PROTECTED,
-        PRIVATE
+        PRIVATE,
+        PRIVATE_PROTECTED,
+        FILE,
+        ITERNAL,
+        PROTECTED_ITERNAL
     };
-    static const std::vector< std::string > ACCESS_MODIFIERS;
+    static const std::vector<std::string> ACCESS_MODIFIERS;
 public:
-    virtual void add( const std::shared_ptr< Unit >& unit, Flags flags ) = 0;
-    virtual std::string compile( unsigned int level = 0 ) const = 0;
+    virtual void add(const std::shared_ptr<Unit>& unit, Unit::Flags flags) = 0;
+    virtual std::string compile(unsigned int level = 0) const = 0;
 protected:
     std::string m_name;
-    using Fields = std::vector< std::shared_ptr< Unit > >;
-    std::vector< Fields > m_fields;
+    using Fields = std::vector<std::shared_ptr<Unit>>;
+    std::vector<Fields> m_fields;
 };
 
 

@@ -9,12 +9,16 @@ CONFIG += c++17 cmdline
 SOURCES += \
         classunit.cpp \
         cppclassunit.cpp \
+        cppfactory.cpp \
         cppmethodunit.cpp \
         cppprintoperatorunit.cpp \
         csclassunit.cpp \
+        csfactory.cpp \
         csmethodunit.cpp \
         csprintoperatorunit.cpp \
+        factory.cpp \
         javaclassunit.cpp \
+        javafactory.cpp \
         javamethodunit.cpp \
         javaprintoperatorunit.cpp \
         main.cpp \
@@ -30,12 +34,16 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     classunit.h \
     cppclassunit.h \
+    cppfactory.h \
     cppmethodunit.h \
     cppprintoperatorunit.h \
     csclassunit.h \
+    csfactory.h \
     csmethodunit.h \
     csprintoperatorunit.h \
+    factory.h \
     javaclassunit.h \
+    javafactory.h \
     javamethodunit.h \
     javaprintoperatorunit.h \
     methodunit.h \
