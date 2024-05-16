@@ -3,7 +3,7 @@
 
 #include<methodunit.h>
 
-class CsMethodUnit: MethodUnit
+class CsMethodUnit: public MethodUnit
 {
 public:
     CsMethodUnit(const std::string& name, const std::string& returnType, Unit::Flags flags) {

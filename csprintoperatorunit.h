@@ -3,7 +3,7 @@
 
 #include<printoperatorunit.h>
 
-class CsPrintOperatorUnit: PrintOperatorUnit
+class CsPrintOperatorUnit: public PrintOperatorUnit
 {
 public:
     explicit CsPrintOperatorUnit(const std::string& text) {

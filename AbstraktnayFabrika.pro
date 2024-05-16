@@ -1,30 +1,15 @@
 QT = core
 
-CONFIG += c++17 cmdline
+CONFIG += c++11 console
+DEFINES += QT_DEPRECATED_WARNINGS
+CONFIG -= app_bundle
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        classunit.cpp \
-        cppclassunit.cpp \
-        cppfactory.cpp \
-        cppmethodunit.cpp \
-        cppprintoperatorunit.cpp \
-        csclassunit.cpp \
-        csfactory.cpp \
-        csmethodunit.cpp \
-        csprintoperatorunit.cpp \
-        factory.cpp \
-        javaclassunit.cpp \
-        javafactory.cpp \
-        javamethodunit.cpp \
-        javaprintoperatorunit.cpp \
-        main.cpp \
-        methodunit.cpp \
-        printoperatorunit.cpp \
-        unit.cpp
+        main.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

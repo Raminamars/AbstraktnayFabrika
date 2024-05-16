@@ -3,7 +3,7 @@
 
 #include<printoperatorunit.h>
 
-class JavaPrintOperatorUnit: PrintOperatorUnit
+class JavaPrintOperatorUnit: public PrintOperatorUnit
 {
 public:
     explicit JavaPrintOperatorUnit(const std::string& text) {

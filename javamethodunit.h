@@ -3,7 +3,7 @@
 
 #include<methodunit.h>
 
-class JavaMethodUnit: MethodUnit
+class JavaMethodUnit: public MethodUnit
 {
 public:
     JavaMethodUnit(const std::string& name, const std::string& returnType, Unit::Flags flags) {
