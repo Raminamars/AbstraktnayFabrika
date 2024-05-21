@@ -12,7 +12,7 @@
 using namespace std;
 
 //Вектор строк, содержащий различные модификаторы доступа
-const std::vector<std::string> ClassUnit::ACCESS_MODIFIERS = {"public", "protected", "private", "private protected", "file", "internal", "protected iternal"};
+const std::vector<std::string> ClassUnit::ACCESS_MODIFIERS = {"public", "protected", "private", "private protected", "file", "iternal", "protected iternal"};
 
 // Функция, возвращающая указатель на объект фабрики в зависимости от выбранного языка
 Factory* getFactory(string language){//для пользователя возращаем указатель
@@ -25,7 +25,7 @@ Factory* getFactory(string language){//для пользователя возр�
         return new JavaFactory();
     } else {
         // Если язык не распознан, возвращаем базовый объект фабрики
-        return new Factory();
+        throw std::runtime_error("Error: Unsupported language\n");
     }
 }
 
@@ -38,7 +38,7 @@ std::string generateProgram(string language) {
         std::shared_ptr<Unit> myMethod1 = factory->createMethod("myMethod1","void", 0);
         std::shared_ptr<Unit> myMethod2 = factory->createMethod("myMethod2","void", MethodUnit::STATIC);
         std::shared_ptr<Unit> myMethod3 = factory->createMethod("myMethod3","void", MethodUnit::VIRTUAL|MethodUnit::CONST);
-        std::shared_ptr<Unit> myPrintOperator = factory->createPrintOperator(R"(Hello, world!\n)");
+        std::shared_ptr<Unit> myPrintOperator = factory->createPrintOperator(R"(Hello, world!)");
         std::shared_ptr<Unit> myMethod4= factory->createMethod("myMethod4","void",MethodUnit::STATIC);
         // Добавляем методы в класс
         myMethod4->add(myPrintOperator,0);

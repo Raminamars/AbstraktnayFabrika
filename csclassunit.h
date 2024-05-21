@@ -34,5 +34,4 @@ public:
         return result;
     }
 };
-
 #endif // CSCLASSUNIT_H
