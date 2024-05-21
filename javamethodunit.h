@@ -11,7 +11,7 @@ public:
         m_returnType = returnType;
         m_flags = flags;
     }
-    void add(const std::shared_ptr<Unit>& unit, Unit::Flags /* flags */ = 0) override {
+    void add(const std::shared_ptr<Unit>& unit, Unit::Flags = 0) override {
         m_body.push_back(unit);
     }
     std::string compile(unsigned int level = 0) const override {
